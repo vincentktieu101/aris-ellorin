@@ -6,13 +6,6 @@ import React, { useEffect, useState } from "react";
 import ArisSleepy from "../../public/aris-sleepy.jpg";
 import ArisLove from "../../public/aris-love.jpg";
 
-function isTouchDevice() {
-  if (typeof window !== "undefined") {
-    return false;
-  }
-  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
-}
-
 export default function Home() {
   const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
   const [moveNoButton, setMoveNoButton] = useState(false);
@@ -41,8 +34,8 @@ export default function Home() {
     return (
       <div className="h-full w-full flex flex-col justify-center items-center">
         <div>App only works on desktop. Sorry!</div>
-        <a href="aris-ellorin.netlify.app" className="text-blue-300 underline">
-          aris-ellorin.netlify.app
+        <a href="https://aris-ellorin.netlify.app/" className="text-blue-300 underline">
+          https://aris-ellorin.netlify.app/
         </a>
       </div>
     );
@@ -76,7 +69,7 @@ export default function Home() {
             </button>
           </div>
         )}
-        {moveNoButton && (
+        {!isYes && moveNoButton && (
           <button
             className="absolute p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white"
             style={{ left: `${xNoButton}%`, top: `${yNoButton}%` }}
