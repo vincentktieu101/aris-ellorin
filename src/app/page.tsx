@@ -34,7 +34,10 @@ export default function Home() {
     return (
       <div className="h-full w-full flex flex-col justify-center items-center">
         <div>App only works on desktop. Sorry!</div>
-        <a href="https://aris-ellorin.netlify.app/" className="text-blue-300 underline">
+        <a
+          href="https://aris-ellorin.netlify.app/"
+          className="text-blue-300 underline"
+        >
           https://aris-ellorin.netlify.app/
         </a>
       </div>
@@ -56,13 +59,13 @@ export default function Home() {
             <button
               className={`${
                 moveNoButton ? "opacity-0 cursor-default" : ""
-              } p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white`}
+              } mb-4 p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white`}
               onMouseOver={() => setMoveNoButton(true)}
             >
               No
             </button>
             <button
-              className="p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white"
+              className="mb-4 p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white"
               onClick={() => setIsYes(true)}
             >
               Yes
@@ -71,12 +74,17 @@ export default function Home() {
         )}
         {!isYes && moveNoButton && (
           <button
-            className="absolute p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white"
+            className="absolute mb-4 p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white"
             style={{ left: `${xNoButton}%`, top: `${yNoButton}%` }}
             onMouseOver={handleHover}
           >
             No
           </button>
+        )}
+        {!isYes ? (
+          <div>🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔</div>
+        ) : (
+          <div>😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍</div>
         )}
       </div>
     );
