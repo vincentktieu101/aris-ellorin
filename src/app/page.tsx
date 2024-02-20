@@ -47,7 +47,14 @@ export default function Home() {
   if (!isMobile) {
     return (
       <div className="h-full w-full flex flex-col justify-center items-center">
-        <div className="mb-4">Is Aris handsome?</div>
+        <div className="mb-2">Is Aris handsome?</div>
+        <div className="mb-4">
+          {!isYes ? (
+            <div>🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔</div>
+          ) : (
+            <div>😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍</div>
+          )}
+        </div>
         <Image
           alt="aris-sleepy"
           src={isYes ? ArisLove : ArisSleepy}
@@ -80,11 +87,6 @@ export default function Home() {
           >
             No
           </button>
-        )}
-        {!isYes ? (
-          <div>🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔</div>
-        ) : (
-          <div>😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍</div>
         )}
       </div>
     );
