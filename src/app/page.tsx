@@ -81,7 +81,7 @@ export default function Home() {
         )}
         {!isYes && moveNoButton && (
           <button
-            className="absolute mb-4 p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white"
+            className="absolute mb-4 p-2 border rounded-xl bg-blue-500 hover:bg-blue-600 text-white duration-100"
             style={{ left: `${xNoButton}%`, top: `${yNoButton}%` }}
             onMouseOver={handleHover}
           >
