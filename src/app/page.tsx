@@ -22,9 +22,9 @@ export default function Home() {
       <div className="mb-2">Is Aris handsome?</div>
       <div className="mb-4">
         {!isYes ? (
-          <div>🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔</div>
+          <div>🤔🤔🤔🤔🤔🤔🤔</div>
         ) : (
-          <div>😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍😍</div>
+          <div>😍😍😍😍😍😍😍</div>
         )}
       </div>
       <Image
